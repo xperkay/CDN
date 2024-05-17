@@ -102,7 +102,7 @@ d3.tip = function() {
   // Returns tip or direction
   tip.direction = function(v) {
     if (!arguments.length) return direction
-    direction = v == null ? v : constant(v)  // kay modif -- was  : d3.functor(v)
+    direction = v == null ? v : d3.constant(v)  // kay modif -- was  : d3.functor(v)
 
     return tip
   }
@@ -114,7 +114,7 @@ d3.tip = function() {
   // Returns offset or
   tip.offset = function(v) {
     if (!arguments.length) return offset
-    offset = v == null ? v : constant(v)  // kay modif -- was  : d3.functor(v)
+    offset = v == null ? v : d3.constant(v)  // kay modif -- was  : d3.functor(v)
 
     return tip
   }
@@ -126,7 +126,7 @@ d3.tip = function() {
   // Returns html value or tip
   tip.html = function(v) {
     if (!arguments.length) return html
-    html = v == null ? v : constant(v)  // kay modif -- was  : d3.functor(v)
+    html = v == null ? v : d3.constant(v)  // kay modif -- was  : d3.functor(v)
 
     return tip
   }
